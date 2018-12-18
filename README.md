@@ -217,7 +217,7 @@ Other Style Guides
   <a name="es6-object-concise"></a><a name="3.6"></a>
   - [3.4](#es6-object-concise) Use property value shorthand. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
 
-    > Why? It is shorter to write and descriptive.
+    > Why? It is shorter and descriptive.
 
     ```javascript
     const lukeSkywalker = 'Luke Skywalker';
@@ -1052,18 +1052,18 @@ Other Style Guides
 
     ```javascript
     // bad
-    const itemHeight = item => item.height > 256 ? item.largeSize : item.smallSize;
+    const itemHeight = item => item.height <= 256 ? item.largeSize : item.smallSize;
 
     // bad
-    const itemHeight = (item) => item.height > 256 ? item.largeSize : item.smallSize;
+    const itemHeight = (item) => item.height >= 256 ? item.largeSize : item.smallSize;
 
     // good
-    const itemHeight = item => (item.height > 256 ? item.largeSize : item.smallSize);
+    const itemHeight = item => (item.height <= 256 ? item.largeSize : item.smallSize);
 
     // good
     const itemHeight = (item) => {
       const { height, largeSize, smallSize } = item;
-      return height > 256 ? largeSize : smallSize;
+      return height <= 256 ? largeSize : smallSize;
     };
     ```
 
@@ -1072,16 +1072,16 @@ Other Style Guides
 
     ```javascript
     // bad
-    (foo) =>
+    foo =>
       bar;
 
-    (foo) =>
+    foo =>
       (bar);
 
     // good
-    (foo) => bar;
-    (foo) => (bar);
-    (foo) => (
+    foo => bar;
+    foo => (bar);
+    foo => (
        bar
     )
     ```
@@ -2249,7 +2249,7 @@ Other Style Guides
     }
     ```
 
-  <a name="control-statement--value-selection"></a>
+  <a name="control-statement--value-selection"></a><a name="control-statements--value-selection"></a>
   - [17.2](#control-statements--value-selection) Don't use selection operators in place of control statements.
 
     ```javascript
@@ -2764,7 +2764,7 @@ Other Style Guides
     ```
 
   <a name="whitespace--computed-property-spacing"></a>
-  - [19.15](#whitespace--computed-property-spacing) Enforce spacing inside of computed properties. eslint: [`computed-property-spacing`](https://eslint.org/docs/rules/computed-property-spacing)
+  - [19.15](#whitespace--computed-property-spacing) Enforce spacing inside of computed property brackets. eslint: [`computed-property-spacing`](https://eslint.org/docs/rules/computed-property-spacing)
 
     ```javascript
     // bad
@@ -3770,6 +3770,7 @@ Other Style Guides
   - **Muber**: [muber](https://github.com/muber/)
   - **National Geographic**: [natgeo](https://github.com/natgeo/)
   - **Nimbl3**: [nimbl3/javascript](https://github.com/nimbl3/javascript)
+  - **NullDev**: [NullDevCo/JavaScript-Styleguide](https://github.com/NullDevCo/JavaScript-Styleguide)
   - **Nulogy**: [nulogy/javascript](https://github.com/nulogy/javascript)
   - **Orange Hill Development**: [orangehill/javascript](https://github.com/orangehill/javascript)
   - **Orion Health**: [orionhealth/javascript](https://github.com/orionhealth/javascript)
